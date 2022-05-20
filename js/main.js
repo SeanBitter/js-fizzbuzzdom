@@ -13,3 +13,24 @@ Consigli del giorno:
 1. scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare
 2. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo “a mano”
 */
+
+//creo il ciclo
+for (let i = 1; i <= 100; i++) {
+    // console.log(i);
+
+    let print = "";
+
+
+    if (i % 3 === 0) {
+        print = "Fizz";
+    } else if (i % 5 === 0) {
+        print = "Buzz";
+    } else if ((i % 3 === 0) && (i % 5 === 0)) {
+        print = "FizzBuzz";
+    } else {
+        print = i.toString();
+    }
+
+
+    console.log(print);
+}
