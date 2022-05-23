@@ -19,18 +19,28 @@ for (let i = 1; i <= 100; i++) {
     // console.log(i);
 
     let print = "";
+    let colorSquares = "bg-secondary";
 
 
     if ((i % 3 === 0) && (i % 5 === 0)) {
         print = "FizzBuzz";
+        colorSquares = "bg-danger";
     } else if (i % 3 === 0) {
         print = "Fizz";
+        colorSquares = "bg-success";
     } else if (i % 5 === 0) {
         print = "Buzz";
+        colorSquares = "bg-warning";
     } else {
         print = i.toString();
     }
 
 
     console.log(print);
+
+    const squaresList = document.querySelector(".squares");
+
+    squaresList.innerHTML += `<div class="my-col ${colorSquares}">
+                                    ${print}
+                                </div>`;
 }
